@@ -6,7 +6,7 @@ const { GoogleGenAI } = require('@google/genai');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.BACKEND_URL_PORT || 4560;
+const port = 4560;
 
 app.use(cors());
 app.use(express.json());
