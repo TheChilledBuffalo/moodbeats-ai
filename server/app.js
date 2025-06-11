@@ -83,6 +83,8 @@ app.post('/api/generate-playlist', async (req, res) => {
             id: track.id,
             name: track.name,
             artists: track.artists.map(artist => artist.name).join(', '),
+            duration: track.duration_ms,
+            albumName: track.album.name,
             albumArt: track.album.images[0]?.url || 'https://via.placeholder.com/150',
             url: track.external_urls.spotify
         }));
